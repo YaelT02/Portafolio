@@ -1,17 +1,35 @@
 ﻿@{
-    ViewBag["Title"] = "Contacto";
+    ViewData["Title"] = "Contacto";
 }
 
 <h1>Formulario de Contacto</h1>
 
 <form asp-controller="Home" asp-action="Contacto">
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <Input type="text" class="form-control-sm" id="nombre" placeholder="Ingresa tu nombre" />
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-lg p-3 nb-5 bg-body-tertiary rounded">
+                <div class="card-body">
+                    <h5 class="card-title">Formulario de Contacto</h5>
+                    <h6 class="card-subtitle mb-2 text-primary">Escribe tus dudas o comentarios</h6>
+
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <Input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <Input type="email" class="form-control" id="email" placeholder="example@ejemplo.com" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <Input type="email" class="form-control-sm" id="email" placeholder="example@ejemplo.com" />
-    </div>
 </form>
