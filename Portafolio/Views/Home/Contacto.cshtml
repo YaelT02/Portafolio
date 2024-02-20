@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag["Title"] = "Contacto";
+}
+
+<h1>Formulario de Contacto</h1>
+
+<form asp-controller="Home" asp-action="Contacto">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <Input type="text" class="form-control-sm" id="nombre" placeholder="Ingresa tu nombre" />
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <Input type="email" class="form-control-sm" id="email" placeholder="example@ejemplo.com" />
+    </div>
+</form>
