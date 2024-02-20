@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Portafolio.Models.ContactoVM
+
+@{
     ViewData["Title"] = "Contacto";
 }
 
@@ -14,12 +16,12 @@
 
                     <div class="mb-3">
                         <label for="nombre" class="form-label">Nombre</label>
-                        <Input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre" />
+                        <Input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingresa tu nombre" />
                     </div>
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <Input type="email" class="form-control" id="email" placeholder="example@ejemplo.com" />
+                        <Input type="email" class="form-control" id="email" name="email" placeholder="example@ejemplo.com" />
                     </div>
 
                     <div class="mb-3">

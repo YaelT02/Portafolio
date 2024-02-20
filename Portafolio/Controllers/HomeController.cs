@@ -10,11 +10,13 @@ namespace Portafolio.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositorioServicios _servicios;
+        private readonly IServiceEmailSendGrid _serviceEmail;
 
-        public HomeController(ILogger<HomeController> logger, ServicioUnico unico, ServicioTransitorio transitorio, ServicioDelimitado delimitado, ServicioUnico unico2, ServicioTransitorio transitorio2, ServicioDelimitado delimitado2, IRepositorioServicios servicios)
+        public HomeController(ILogger<HomeController> logger, IRepositorioServicios servicios, IServiceEmailSendGrid serviceEmail)
         {
             _logger = logger;
             _servicios = servicios;
+            _serviceEmail = serviceEmail;
         }
 
         public IActionResult Index()
@@ -41,7 +43,21 @@ namespace Portafolio.Controllers
             return View(proyectos);
         }
 
+        [HttpGet]
         public IActionResult Contacto()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Contacto(ContactoVM contactoVM)
+        {
+            await _serviceEmail.Enviar(contactoVM);
+            return RedirectToAction("Gracias");
+        }
+
+        [HttpGet]
+        public IActionResult Gracias() 
         {
             return View();
         }
