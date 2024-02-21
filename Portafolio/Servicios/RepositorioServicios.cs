@@ -9,13 +9,13 @@ namespace Portafolio.Servicios
         {
             return new List<Proyecto>()
             {
-                new Proyecto{Titulo="Amazon", Descripcion="E-commerce desarrollado en Net Core", Link="https://amazon.com", ImagenURL="/img/amazon.png"},
+                new Proyecto{Titulo="PROLAMSA", Descripcion="Trabajo actual, organización enfocada en la elaboración de tubos de acero.", Link="https://www.prolamsa.com/", ImagenURL="/img/logo_prolamsa.png"},
 
-                new Proyecto{Titulo="Mercado libre", Descripcion="E-commerce con iumplementacion en JavaScript", Link="https://www.mercadolibre.com.mx", ImagenURL="/img/mercadolibre.jpg"},
+                new Proyecto{Titulo="NOVA", Descripcion="Web App enfocada en el sistema de ahorro personal.", Link="https://www.facebook.com/profile.php?id=100091128860576&mibextid=ZbWKwL", ImagenURL="/img/NOVA.jpg"},
 
-                new Proyecto{Titulo="Twilio", Descripcion="Administracion y envio de de Emails", Link="https://www.twilio.com/es-mx", ImagenURL="/img/twilio.png"},
+                new Proyecto{Titulo="Digital 5'S", Descripcion="Aplicación movil enfocada en la realización de auditorias enfocadas en el cumplimiento de la metodologia 5'S", Link="https://www.prolamsa.com/", ImagenURL="/img/Digital5S.png"},
 
-                new Proyecto{Titulo="Microsoft", Descripcion="Plataforma de aprendizaje Big-Learn", Link="https://www.microsoft.com/es-mx/", ImagenURL="/img/microsoft.png"},
+                new Proyecto{Titulo="GitHub", Descripcion="Plataforma de desarrollo de software en línea que permite a los desarrolladores almacenar, supervisar y trabajar en proyectos de software.", Link="https://github.com/YaelT02/Portafolio", ImagenURL="/img/BannerGit.png"},
             };
         }
     }

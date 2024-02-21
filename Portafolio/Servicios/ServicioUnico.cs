@@ -3,8 +3,8 @@
     public class ServicioUnico
     {
         public Guid ObtenerGuid { get; set; }
-        public ServicioUnico() 
-        { 
+        public ServicioUnico()
+        {
             ObtenerGuid = Guid.NewGuid();
         }
     }

@@ -1,31 +1,88 @@
-﻿#foto {
+﻿.nombre {
+    position: relative;
+    color: #00cc00;
+    font-family: 'Courier New',monospace;
+}
+
+.nombre::after {
+    content: '|';
+    position: sticky;
+    right: -10px;
+    animation: parpadeo 1s infinite;
+}
+
+.text-mov {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00cc00;
+    animation: efecto-escritura 5s steps(60) 1s infinite normal both, parpadeo-cursor 500ms steps(50) infinite;
+    color: #00cc00;
+    font-family: 'Courier New',monospace;
+}
+
+@keyframes parpadeo {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+@keyframes efecto-escritura {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes parpadeo-cursor {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
+}
+
+@keyframes borde-movimiento {
+    0% {
+        border-color: red;
+    }
+
+    25% {
+        border-color: yellow;
+    }
+
+    50% {
+        border-color: green;
+    }
+
+    75% {
+        border-color: blue;
+    }
+
+    100% {
+        border-color: red;
+    }
+}
+
+#foto {
     width: 200px;
     margin: 2rem 0;
     border-radius: 50%;
+    border: 5px solid red;
+    animation: borde-movimiento 5s infinite linear;
     /*border: 2px solid black;*/
 }
 
 .contenedor {
-    background-color: black;
+    /*background-color: #b34cf4;*/
     padding-bottom: 1rem;
 }
-
-.seccion-bienvenida {
-    margin: 5rem 0 5rem 0;
-}
-
-    .seccion-bienvenida h1 {
-        margin-bottom: 1rem;
-        color: red;
-        font-style: italic;
-    }
-
-    .seccion-bienvenida p {
-        font-family: sans-serif;
-        line-height: 1.5;
-        font-size: 1.25rem;
-
-    }
 
 #imagen-dotnet {
     width: 350px;
@@ -37,11 +94,34 @@
 
 .marco {
     margin-top: 2rem;
+    width: 120rem;
+}
+
+.habilidades {
+    width: 40rem;
+    height: 49.5rem;
+    border: 7px solid red;
+    animation: borde-movimiento 5s infinite linear;
 }
 
 .habilidades ul {
     list-style: none;
     padding-left: 0;    
+}
+
+.marco p {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.5rem;
+}
+
+.marco li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+}
+
+.marco h3 {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:2.5rem;
 }
 
 .habilidades i {
@@ -54,3 +134,80 @@
     width: 50rem;
     justify-content: center;
 } 
+
+.headers .nav-link:hover {
+    color:black !important;
+    transform: scale(1,2) !important;
+}
+
+@keyframes cambio-color {
+    0% {
+        color: red;
+    }
+
+    25% {
+        color: yellow;
+    }
+
+    50% {
+        color: orange;
+    }
+
+    75% {
+        color: white;
+    }
+
+    100% {
+        color: red;
+    }
+}
+
+.text-change {
+    animation: cambio-color 5s infinite;
+}
+
+@keyframes color-mov {
+    0% {
+        background-color: #432565;
+    }
+
+    25% {
+        background-color: #7642b2;
+    }
+
+    50% {
+        background-color: #5c338b;
+    }
+
+    75% {
+        background-color: #5c338b;
+    }
+
+    100% {
+        background-color: #432565;
+    }
+}
+
+.seccion-bienvenida {
+    margin: 1rem 0 5rem 0;
+    height: auto !important;
+    width: 50rem;
+    animation: color-mov 5s infinite;
+    border-radius: 50px !important;
+}
+
+    .seccion-bienvenida h1 {
+        margin-bottom: 1rem;
+        color: red;
+        font-style: italic;
+    }
+
+    .seccion-bienvenida p {
+        font-family: sans-serif;
+        line-height: 1.5;
+        font-size: 1.25rem;
+    }
+
+.fecha {
+ 
+}

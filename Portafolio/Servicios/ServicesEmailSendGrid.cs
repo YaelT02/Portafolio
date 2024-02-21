@@ -21,11 +21,11 @@ namespace Portafolio.Servicios
             var nombre = _configuration.GetValue<string>("SENDGRID_NOBRE");
 
             var cliente = new SendGridClient(apiKey);
-            var from = new EmailAddress(email,nombre);
-            var subject = $"El cliente { contactoVM.Email } quiere contactarte";
-            var to = new EmailAddress(email,nombre);
+            var from = new EmailAddress(email, nombre);
+            var subject = $"El cliente {contactoVM.Email} quiere contactarte";
+            var to = new EmailAddress(email, nombre);
             var mensajeTexto = contactoVM.Mensaje;
-            var contenidohtml = $@"De: { contactoVM.Nombre } - Email: { contactoVM.Email } - Mensaje: { contactoVM.Mensaje }";
+            var contenidohtml = $@"De: {contactoVM.Nombre} - Email: {contactoVM.Email} - Mensaje: {contactoVM.Mensaje}";
             var singleEmail = MailHelper.CreateSingleEmail(from, to, subject, mensajeTexto, contenidohtml);
             var respuesta = await cliente.SendEmailAsync(singleEmail);
         }

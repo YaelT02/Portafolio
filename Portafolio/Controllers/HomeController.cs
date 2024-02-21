@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portafolio.Infrestructura;
 using Portafolio.Models;
-using Portafolio.Servicios;
 using System.Diagnostics;
 
 namespace Portafolio.Controllers
@@ -57,7 +56,7 @@ namespace Portafolio.Controllers
         }
 
         [HttpGet]
-        public IActionResult Gracias() 
+        public IActionResult Gracias()
         {
             return View();
         }
